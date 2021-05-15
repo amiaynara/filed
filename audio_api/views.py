@@ -77,7 +77,7 @@ class FileListView(APIView):
             serializer = PodcastSerializer(podcasts, many=True) 
         else:
             return Response(status=status.HTTP_404_NOT_FOUND)
-        return Response({"Success":"See home page for instructions", "result": serializer.data})
+        return Response({"status_code":status.HTTP_201_CREATED, "Success":"See home page for instructions", "result": serializer.data})
 
     def post(self, request, type, format=None):
         if type=="audiobook":
