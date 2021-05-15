@@ -1,0 +1,51 @@
+
+.container{
+    width: 60%;
+    margin: auto;
+}
+.box {
+    border: 1px solid black;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+}
+.json{
+    font-family: monospace;
+}
+.padder{
+    padding-left: 2rem;
+}
+.apis{
+    font-family: monospace;
+}
+li{
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+.apis {
+    background: #999999;
+    margin: 0.5rem 0 0.5rem;
+    padding: 1rem;
+}
+.highlight{
+    padding: 0.1rem 0.5rem;
+    background: #ccccff;
+    color: blue;
+    margin-right: 0.3rem;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+}
+.files{
+    font-family: monospace;
+}
+.file{
+    background-color: #ffcccc;
+    color: red 
+}
+.example{
+    margin-left:1rem;
+    display:inline-block;
+    background: #ccffcc;
+    color: green;
+    padding: 0.3rem 1rem;
+    font-family: monospace;
+}

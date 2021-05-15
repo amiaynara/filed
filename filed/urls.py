@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from audio_api.views import FileListView, FileDetailView, HomeView
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', HomeView, name='home'),
+    path('<str:type>/<int:pk>/', FileDetailView.as_view(), name='individual-file'),
+    path('<str:type>/', FileListView.as_view(), name='file-list'),
 ]

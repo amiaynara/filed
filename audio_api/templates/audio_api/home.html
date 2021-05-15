@@ -1,0 +1,73 @@
+{% extends 'audio_api/base.html' %}
+
+{% block body %}
+    <div class="container">
+        <h2>Api Documentation</h2>
+        <hr>
+        Following are the available endpoints
+        <div class="apis">
+            <ul>
+                <li>http://localhost:8000/
+                    <span class="highlight">GET</span></li>
+                <li>http://localhost:8000/&lt;file_type&gt;/    
+                    <span class="highlight">GET</span>
+                    <span class="highlight">POST</span>
+                <li>http://localhost:8000/&lt;file_type&gt;/&lt;id&gt;/
+                    <span class="highlight">GET</span>
+                    <span class="highlight">PUT</span>
+                    <span class="highlight">DELETE</span></li>
+            </ul>
+        </div>
+        Available file types:
+        <ul class="files">
+            <li><span class="highlight file">song</span></li>
+            <li><span class="highlight file">podcast</span></li>
+            <li><span class="highlight file">audiobook</span></li>
+        </ul>
+        Example Api <div class="example"><strong>http://localhost:8000/song/</strong></div>
+        <h3>Data formats</h3>
+        <div class="box">
+            <div class="title">Song</div>
+            <hr>
+                <div class="json">
+                    {<br/>
+                    <span class="padder"></span>"id": 1,<br/>
+                    <span class="padder"></span>"name": "luck",<br/>
+                    <span class="padder"></span>"duration": 234,<br/>
+                    <span class="padder"></span>"upload_time": "2021-05-15T14:14:38.455605+05:30"<br/>
+                    }<br/>
+            </div>
+        </div>
+        <div class="box">
+            <div class="title">PodCast</div>
+            <hr>
+                <div class="json">
+                    {<br/>
+                    <span class="padder"></span>"id": 1,<br/>
+                    <span class="padder"></span>"name": "luck",<br/>
+                    <span class="padder"></span>"duration": 234,<br/>
+                    <span class="padder"></span>"host": "Manish",<br/>
+                    <span class="padder"></span>"upload_time": "2021-05-15T14:14:38.455605+05:30"<br/>
+                    <span class="padder"></span>"prtcpnts": ["Amiay", "Aman", "Nilanshi"]<br/>
+                    }<br/>
+                </div>
+        </div>
+        <div class="box">
+            <div class="title">Audio Book</div>
+            <hr>
+                <div class="json">
+                    {<br/>
+                    <span class="padder"></span>"id": 1,<br/>
+                    <span class="padder"></span>"title": "Edge",<br/>
+                    <span class="padder"></span>"author": "Sagar",<br/>
+                    <span class="padder"></span>"narrator": "Sameer",<br/>
+                    <span class="padder"></span>"duration": 234,<br/>
+                    <span class="padder"></span>"upload_time": "2021-05-15T14:14:38.455605+05:30"<br/>
+                    }<br/>
+                </div>
+        </div>
+        <div class="box">
+            #Note: Do Not use "id" field for creating new entry.
+        </div>
+    </div>
+{% endblock %}

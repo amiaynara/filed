@@ -1,0 +1,39 @@
+{% load static %}
+<!Doctype html>
+<html>
+    <head>
+         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>
+            {% block title %}
+            {% endblock %}
+            Template title
+        </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'audio_api/main.css' %}">
+    </head>
+    <body>
+
+        <main role="main" class="container">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class = "alert alert-{{message.tags}}">
+                            {{message}}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+        </main>
+
+        {% block body %} 
+            
+        {% endblock %}
+        
+
+
+
+        
+
+        
+
+    </body>
+</html>
