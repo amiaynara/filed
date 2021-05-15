@@ -15,7 +15,7 @@ class Podcast(models.Model):
     upload_time = models.DateTimeField(default=timezone.now)
     host        = models.CharField(max_length=100)
     prtcpnts    = ArrayField(models.CharField(max_length=100, blank=True, null=True), size=10, blank=True)
-    options     = models.JSONField(null=True, blank=True)
+    #options    = models.JSONField(null=True, blank=True)
 
 class AudioBook(models.Model):
     title       = models.CharField(max_length=100)
